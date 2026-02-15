@@ -209,3 +209,25 @@ footer{
   display:block;
   margin:10px auto;
 }
+.reviews{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+
+.review{
+  background:white;
+  padding:25px;
+  width:280px;
+  border-radius:12px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  font-style:italic;
+}
+
+.review h4{
+  margin-top:15px;
+  color:#00695c;
+}
+
