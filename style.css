@@ -231,12 +231,21 @@ p {
 
 
 /* FOOTER */
-footer{
-  background:#222;
-  color:white;
-  padding:20px;
-  text-align:center;
+footer {
+  background: linear-gradient(90deg,#004d40,#00695c);
+  color: white;
+  text-align: center;
+  padding: 25px 10px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-top: 60px;
 }
+
+footer p {
+  margin: 0;
+  opacity: 0.9;
+}
+
 
 @keyframes fadeIn{
   from{opacity:0;}
@@ -484,6 +493,7 @@ body {
   from { transform: scale(0.7); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+
 
 
 
