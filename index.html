@@ -223,9 +223,24 @@ document.addEventListener("click", () => {
     <button onclick="closePopup()">OK</button>
   </div>
 </div>
+<script>
+const form = document.querySelector(".booking-box form");
+const popup = document.getElementById("successPopup");
+
+form.addEventListener("submit", function(e){
+  e.preventDefault();
+  popup.classList.add("show");
+  form.reset();
+});
+
+function closePopup(){
+  popup.classList.remove("show");
+}
+</script>
 
 </body>
 </html>
+
 
 
 
