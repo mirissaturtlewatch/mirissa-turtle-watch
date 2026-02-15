@@ -119,16 +119,22 @@
   <p><strong>Email:</strong> mirissaturtlewatch@gmail.com</p>
 
   <h3>Send a Booking Request</h3>
-<form id="bookingForm">
-  <input type="text" id="name" placeholder="Your Name" required>
-  <input type="date" id="date" required>
-  <input type="time" id="time" required>
-  <input type="tel" id="phone" placeholder="Phone Number" required>
-  <textarea id="note" placeholder="Extra details"></textarea>
 
-  <button type="submit" class="book-btn">Send Booking</button>
+<form class="booking-form" action="https://formsubmit.co/mirissaturtlewatch@gmail.com" method="POST">
+
+  <input type="text" name="name" placeholder="Your Name" required>
+
+  <input type="email" name="email" placeholder="Your Email" required>
+
+  <input type="text" name="date" placeholder="Tour Date (example: 12 March)" required>
+
+  <input type="number" name="people" placeholder="Number of People" required>
+
+  <textarea name="message" placeholder="Message"></textarea>
+
+  <button type="submit">Send Booking</button>
+
 </form>
-
 
 
 <div class="map">
@@ -162,40 +168,11 @@ images.forEach(img => {
   });
 });
 </script>
-<script>
-document.getElementById("bookingForm").addEventListener("submit", function(e){
-    e.preventDefault();
 
-    let name = document.getElementById("name").value;
-    let date = document.getElementById("date").value;
-    let time = document.getElementById("time").value;
-    let phone = document.getElementById("phone").value;
-    let note = document.getElementById("note").value;
-
-    let message =
-`NEW BOOKING
-Name: ${name}
-Date: ${date}
-Time: ${time}
-Phone: ${phone}
-Details: ${note}`;
-
-    // -------- WHATSAPP --------
-    let whatsappNumber = "94743807437"; // oya number eka
-    let whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-
-    // -------- EMAIL --------
-    let email = "mirissaturtlewatch@gmail.com";
-    let mailURL = `mailto:${email}?subject=New Booking&body=${encodeURIComponent(message)}`;
-
-    // open both
-    window.open(whatsappURL, "_blank");
-    window.location.href = mailURL;
-});
-</script>
 
 </body>
 </html>
+
 
 
 
