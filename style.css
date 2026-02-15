@@ -314,6 +314,34 @@ footer{
 .section {
   padding: 90px 20px;
 }
+/* CUSTOM CURSOR */
+body {
+  cursor: none;
+}
+
+.cursor, .cursor2 {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 99999;
+}
+
+/* main dot */
+.cursor {
+  width: 8px;
+  height: 8px;
+  background: #ffeb3b;
+}
+
+/* ripple ring */
+.cursor2 {
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(255,255,255,0.7);
+  transition: transform 0.15s ease-out;
+}
+
 
 
 
