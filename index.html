@@ -204,9 +204,18 @@ document.addEventListener("mousemove", e => {
   }, 80);
 });
 </script>
+<script>
+document.addEventListener("click", () => {
+  cursor2.style.transform = "translate(-50%, -50%) scale(1.8)";
+  setTimeout(() => {
+    cursor2.style.transform = "translate(-50%, -50%) scale(1)";
+  }, 200);
+});
+</script>
 
 </body>
 </html>
+
 
 
 
