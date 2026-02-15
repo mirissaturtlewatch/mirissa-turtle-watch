@@ -311,6 +311,8 @@ footer{
 .booking-form button:hover{
   background:#004d40;
 }
+
+}
 .section {
   padding: 90px 20px;
 }
@@ -341,6 +343,7 @@ body {
   border: 2px solid rgba(255,255,255,0.7);
   transition: transform 0.15s ease-out;
 }
+
 
 
 
