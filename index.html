@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mirissa Turtle Watch | Sri Lanka</title>
@@ -32,7 +32,7 @@
 </header>
 
 <!-- ABOUT -->
-<section id="about" class="section">
+<section id="about" class="section" data-aos="fade-up">
   <h2>About Us</h2>
   <p>
     We provide safe and eco-friendly turtle watching tours in Mirissa.
@@ -41,7 +41,7 @@
 </section>
 
 <!-- TOURS -->
-<section id="tours" class="section dark">
+<section id="tours" class="section" data-aos="fade-up">
   <h2>Our Tours</h2>
   <div class="cards">
 
@@ -72,7 +72,7 @@
     <li>Private Tour — <strong>Contact Us</strong></li>
   </ul>
 </section>
-  <section id="reviews" class="section">
+  <section id="reviews" class="section" data-aos="fade-up">
   <h2>What Our Guests Say</h2>
 
   <div class="reviews">
@@ -97,7 +97,7 @@
 
 
 <!-- GALLERY -->
-<section id="gallery" class="section dark">
+<section id="gallery" class="section" data-aos="zoom-in">
   <h2>Gallery</h2>
   <div class="gallery">
     <img src="images/turtle1.jpg">
@@ -111,7 +111,7 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section">
+<section id="contact" class="section" data-aos="fade-up">
   <h2>Contact</h2>
 
   <p><strong>Location:</strong> Mirissa, Sri Lanka</p>
@@ -169,9 +169,17 @@ images.forEach(img => {
 });
 </script>
 
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1200,
+    once: true
+  });
+</script>
 
 </body>
 </html>
+
 
 
 
