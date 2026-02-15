@@ -272,4 +272,8 @@ footer{
 .booking-form button:hover{
   background:#004d40;
 }
+.section {
+  padding: 90px 20px;
+}
+
 
