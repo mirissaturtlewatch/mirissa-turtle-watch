@@ -518,6 +518,17 @@ footer p {
 .booking-box textarea {
   width: 100%;
 }
+.socials i {
+  font-size: 26px;
+  color: white;
+  transition: 0.3s;
+}
+
+.socials i:hover {
+  color: #ffeb3b;
+  transform: scale(1.2) translateY(-3px);
+}
+
 
 
 
