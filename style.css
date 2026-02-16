@@ -505,6 +505,20 @@ footer {
 footer p {
   margin: 0;
 }
+.booking-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row input {
+  flex: 1;
+}
+
+.booking-box textarea {
+  width: 100%;
+}
+
 
 
 
