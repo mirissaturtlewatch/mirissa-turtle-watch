@@ -131,20 +131,22 @@
     <h2>Send a Booking Request</h2>
 
     <form>
-      <div class="form-row">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
+  <form action="https://formsubmit.co/mirissaturtlewatch@gmail.com" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="New Turtle Booking!">
+    <input type="hidden" name="_template" value="table">
+        <input type="text" name="Name" placeholder="Your Name" required>
+        <input type="email" name="Email" placeholder="Your Email" required>
       </div>
 
       <div class="form-row">
-        <input type="text" placeholder="Tour Date (eg: 12 March)" required>
-        <input type="number" placeholder="Number of People" required>
+        <input type="text" name="Date" placeholder="Tour Date (eg: 12 March)" required>
+        <input type="number" name="People" placeholder="Number of People" required>
       </div>
 
-      <textarea placeholder="Message"></textarea>
+      <textarea name="Message" placeholder="Message"></textarea>
 
       <button type="submit" class="book-btn">Send Booking</button>
-    </form>
   </div>
 </section>
 
@@ -227,12 +229,6 @@ document.addEventListener("click", () => {
 const form = document.querySelector(".booking-box form");
 const popup = document.getElementById("successPopup");
 
-form.addEventListener("submit", function(e){
-  e.preventDefault();
-  popup.classList.add("show");
-  form.reset();
-});
-
 function closePopup(){
   popup.classList.remove("show");
 }
@@ -240,6 +236,7 @@ function closePopup(){
 
 </body>
 </html>
+
 
 
 
