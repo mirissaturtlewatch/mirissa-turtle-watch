@@ -171,6 +171,36 @@
 </footer>
 
 <script>
+document.getElementById("bookingForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var date = document.getElementById("date").value;
+    var people = document.getElementById("people").value;
+    var message = document.getElementById("message").value;
+
+    var whatsappMessage =
+`Hello Mirissa Turtle Watch,
+
+I would like to book a turtle tour.
+
+Name: ${name}
+Email: ${email}
+Date: ${date}
+People: ${people}
+Message: ${message}
+
+Please confirm availability.`;
+
+    var phoneNumber = "94743807437";
+    var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(whatsappMessage);
+
+    window.open(url, "_blank");
+});
+</script>
+
+<script>
 window.addEventListener('scroll', () => {
   document.getElementById('navbar')
   .classList.toggle('scrolled', window.scrollY > 50);
@@ -239,38 +269,10 @@ function closePopup(){
   popup.classList.remove("show");
 }
 </script>
-<script>
-document.getElementById("bookingForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var date = document.getElementById("date").value;
-    var people = document.getElementById("people").value;
-    var message = document.getElementById("message").value;
-
-    var whatsappMessage =
-`Hello Mirissa Turtle Watch,
-
-I would like to book a turtle tour.
-
-Name: ${name}
-Email: ${email}
-Date: ${date}
-People: ${people}
-Message: ${message}
-
-Please confirm availability.`;
-
-    var phoneNumber = "94743807437";
-    var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(whatsappMessage);
-
-    window.open(url, "_blank");
-});
-</script>
 
 </body>
 </html>
+
 
 
 
