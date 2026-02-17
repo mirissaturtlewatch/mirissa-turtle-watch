@@ -134,26 +134,16 @@
     <h2>Send a Booking Request</h2>
 
     <form>
-  <form action="https://formsubmit.co/mirissaturtlewatch@gmail.com" method="POST">
-    
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_subject" value="New Turtle Booking!">
-    <input type="hidden" name="_template" value="table">
-    
-     <div class="form-row">
-        <input type="text" name="Name" placeholder="Your Name" required>
-        <input type="email" name="Email" placeholder="Your Email" required>
-    </div>
+ <form id="bookingForm">
+  <input type="text" id="name" placeholder="Your Name" required>
+  <input type="email" id="email" placeholder="Your Email" required>
+  <input type="text" id="date" placeholder="Tour Date" required>
+  <input type="number" id="people" placeholder="Number of People" required>
+  <textarea id="message" placeholder="Message"></textarea>
 
-      <div class="form-row">
-        <input type="text" name="Date" placeholder="Tour Date (eg: 12 March)" required>
-        <input type="number" name="People" placeholder="Number of People" required>
-      </div>
+  <button type="submit" class="btn">Send Booking via WhatsApp</button>
+</form>
 
-      <textarea name="Message" placeholder="Message"></textarea>
-
-      <button type="submit" class="book-btn">Send Booking</button>
-  </div>
 </section>
 
 <div class="map">
@@ -249,9 +239,39 @@ function closePopup(){
   popup.classList.remove("show");
 }
 </script>
+<script>
+document.getElementById("bookingForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var date = document.getElementById("date").value;
+    var people = document.getElementById("people").value;
+    var message = document.getElementById("message").value;
+
+    var whatsappMessage =
+`Hello Mirissa Turtle Watch,
+
+I would like to book a turtle tour.
+
+Name: ${name}
+Email: ${email}
+Date: ${date}
+People: ${people}
+Message: ${message}
+
+Please confirm availability.`;
+
+    var phoneNumber = "94743807437";
+    var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(whatsappMessage);
+
+    window.open(url, "_blank");
+});
+</script>
 
 </body>
 </html>
+
 
 
 
