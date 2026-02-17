@@ -171,34 +171,40 @@
 </footer>
 
 <script>
-document.getElementById("bookingForm").addEventListener("submit", function(e) {
-    e.preventDefault();
+document.addEventListener("DOMContentLoaded", function() {
 
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var date = document.getElementById("date").value;
-    var people = document.getElementById("people").value;
-    var message = document.getElementById("message").value;
+  var form = document.getElementById("bookingForm");
 
-    var whatsappMessage =
-`Hello Mirissa Turtle Watch,
+  if(form){
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
 
-I would like to book a turtle tour.
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var date = document.getElementById("date").value;
+      var people = document.getElementById("people").value;
+      var message = document.getElementById("message").value;
 
-Name: ${name}
-Email: ${email}
-Date: ${date}
-People: ${people}
-Message: ${message}
+      var whatsappMessage =
+      "Hello Mirissa Turtle Watch,%0A%0A" +
+      "I would like to book a turtle tour.%0A%0A" +
+      "Name: " + name + "%0A" +
+      "Email: " + email + "%0A" +
+      "Date: " + date + "%0A" +
+      "People: " + people + "%0A" +
+      "Message: " + message + "%0A%0A" +
+      "Please confirm availability.";
 
-Please confirm availability.`;
+      var phoneNumber = "94743807437";
+      var url = "https://wa.me/" + phoneNumber + "?text=" + whatsappMessage;
 
-    var phoneNumber = "94743807437";
-    var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(whatsappMessage);
+      window.location.href = url;
+    });
+  }
 
-    window.open(url, "_blank");
 });
 </script>
+
 
 <script>
 window.addEventListener('scroll', () => {
@@ -272,6 +278,7 @@ function closePopup(){
 
 </body>
 </html>
+
 
 
 
