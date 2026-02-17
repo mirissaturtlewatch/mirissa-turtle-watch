@@ -299,10 +299,20 @@ function sendWhatsApp() {
 
   window.open(url, "_blank");
 }
+  <div id="successPopup" class="popup">
+  <div class="popup-content">
+    <h2>Booking Request Sent!</h2>
+    <p>We will reply to you on WhatsApp shortly.</p>
+    <button onclick="closePopup()">OK</button>
+  </div>
+</div>
+
+<audio id="dingSound" src="ding.mp3"></audio>
 </script>
 
 </body>
 </html>
+
 
 
 
