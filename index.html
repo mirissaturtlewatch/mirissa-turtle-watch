@@ -275,6 +275,16 @@ function closePopup(){
   popup.classList.remove("show");
 }
 </script>
+<div id="successPopup" class="popup">
+  <div class="popup-content">
+    <h2>Booking Request Sent!</h2>
+    <p>We will reply to you on WhatsApp shortly.</p>
+    <button onclick="closePopup()">OK</button>
+  </div>
+</div>
+
+<audio id="dingSound" src="ding.mp3"></audio>
+
 <script>
 function sendWhatsApp() {
 
@@ -306,21 +316,11 @@ function sendWhatsApp() {
 function closePopup(){
   document.getElementById("successPopup").style.display = "none";
 }
-
-}
-   <div id="successPopup" class="popup">
-  <div class="popup-content">
-    <h2>Booking Request Sent!</h2>
-    <p>We will reply to you on WhatsApp shortly.</p>
-    <button onclick="closePopup()">OK</button>
-  </div>
-</div>
-
-<audio id="dingSound" src="ding.mp3"></audio>
 </script>
       
 </body>
 </html>
+
 
 
 
