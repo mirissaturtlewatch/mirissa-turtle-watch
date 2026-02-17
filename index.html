@@ -140,8 +140,8 @@
   <input type="text" id="date" placeholder="Tour Date" required>
   <input type="number" id="people" placeholder="Number of People" required>
   <textarea id="message" placeholder="Message"></textarea>
-
-  <button type="submit" class="btn">Send Booking via WhatsApp</button>
+   
+ <button type="button" class="btn" onclick="sendWhatsApp()">Send Booking via WhatsApp</button>
 </form>
 
 </section>
@@ -275,9 +275,35 @@ function closePopup(){
   popup.classList.remove("show");
 }
 </script>
+<script>
+function sendWhatsApp() {
+
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var date = document.getElementById("date").value;
+  var people = document.getElementById("people").value;
+  var message = document.getElementById("message").value;
+
+  var text =
+  "Hello Mirissa Turtle Watch,%0A%0A" +
+  "I would like to book a turtle tour.%0A%0A" +
+  "Name: " + name + "%0A" +
+  "Email: " + email + "%0A" +
+  "Date: " + date + "%0A" +
+  "People: " + people + "%0A" +
+  "Message: " + message + "%0A%0A" +
+  "Please confirm availability.";
+
+  var phone = "94743807437";
+  var url = "https://wa.me/" + phone + "?text=" + text;
+
+  window.open(url, "_blank");
+}
+</script>
 
 </body>
 </html>
+
 
 
 
