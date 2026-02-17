@@ -298,8 +298,17 @@ function sendWhatsApp() {
   var url = "https://wa.me/" + phone + "?text=" + text;
 
   window.open(url, "_blank");
+
+  document.getElementById("successPopup").style.display = "flex";
+  document.getElementById("dingSound").play();
 }
-  <div id="successPopup" class="popup">
+
+function closePopup(){
+  document.getElementById("successPopup").style.display = "none";
+}
+
+}
+   <div id="successPopup" class="popup">
   <div class="popup-content">
     <h2>Booking Request Sent!</h2>
     <p>We will reply to you on WhatsApp shortly.</p>
@@ -309,9 +318,10 @@ function sendWhatsApp() {
 
 <audio id="dingSound" src="ding.mp3"></audio>
 </script>
-
+      
 </body>
 </html>
+
 
 
 
