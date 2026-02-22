@@ -616,6 +616,46 @@ footer p {
   transform:translateY(-10px);
   box-shadow:0 25px 50px rgba(0,0,0,0.15);
 }
+/* Premium card glow */
+.why-card{
+  position:relative;
+  overflow:hidden;
+}
+
+.why-card::before{
+  content:"";
+  position:absolute;
+  top:-2px;
+  left:-2px;
+  right:-2px;
+  bottom:-2px;
+  background:linear-gradient(45deg,#00c2d3,#00ffea,#009688);
+  z-index:-1;
+  border-radius:20px;
+  opacity:0;
+  transition:0.4s;
+}
+
+.why-card:hover::before{
+  opacity:1;
+}
+
+.why-card:hover{
+  transform:translateY(-12px);
+}
+.why-different{
+  position:relative;
+  overflow:hidden;
+}
+
+.why-different::after{
+  content:"🐢";
+  position:absolute;
+  font-size:120px;
+  opacity:0.05;
+  bottom:10px;
+  right:20px;
+}
 
 
 
