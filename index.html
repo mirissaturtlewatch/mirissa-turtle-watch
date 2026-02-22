@@ -42,7 +42,6 @@
 <meta property="og:image" content="https://YOUR-USERNAME.github.io/mirissa-turtle-watch/images/hero.jpg">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://YOUR-USERNAME.github.io/mirissa-turtle-watch/">
-<title>Turtle Watching in Mirissa | Mirissa Turtle Watch Sri Lanka</title>
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -170,16 +169,18 @@
  <section id="booking" class="section" data-aos="fade-up">
   <div class="booking-box">
     <h2>Send a Booking Request</h2>
-
-    <form>
- <form id="bookingForm">
+<form id="bookingForm">
   <input type="text" id="name" placeholder="Your Name" required>
   <input type="email" id="email" placeholder="Your Email" required>
-  <input type="text" id="date" placeholder="Tour Date" required>
-  <input type="number" id="people" placeholder="Number of People" required>
+
+  <div class="form-row">
+    <input type="text" id="date" placeholder="Tour Date" required>
+    <input type="number" id="people" placeholder="Number of People" required>
+  </div>
+
   <textarea id="message" placeholder="Message"></textarea>
-   
- <button type="button" class="btn" onclick="sendWhatsApp()">Send Booking via WhatsApp</button>
+
+  <button type="button" class="book-btn" onclick="sendWhatsApp()">Send Booking via WhatsApp</button>
 </form>
 
 </section>
@@ -363,6 +364,7 @@ function closePopup(){
 
 
       
+
 
 
 
